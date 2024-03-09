@@ -46,14 +46,31 @@
       transition: 0.3s;
     }
 
+    @keyframes typing-animation {
+    from {
+      width: 0; 
+    }
+    to {
+      width: 25%;
+    }
+  }
+
+  #typing-header {
+    white-space: nowrap; 
+    overflow: hidden; 
+    border-right: .15em solid;
+    animation: typing-animation 5s steps(40, end); 
+    animation-iteration-count: infinite;
+  }
+
     .download-button:hover {
       background: linear-gradient(45deg, #4facfe, #00f2fe);
     }
   </style>
 </head>
 <body>
-  <h2>Poison Modz Downloads</h2>
-
+  <h2 id="typing-header">Poison Modz Downloads</h2>
+ 
 <div class="video-container">
   <h2>Mini Militia 5.5.0 Mod Menu</h2>
   <iframe width="560" height="310" src="https://www.youtube.com/embed/rFYDIZQB2Z0?si=-nmxogktS2QoAQyN" frameborder="10" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
